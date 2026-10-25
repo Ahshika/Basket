@@ -14,7 +14,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(const MakerApp());
 
-const _blue = Color(0xFF1B4FD8);
+const _green = Color(0xFF15803D);
 const _orange = Color(0xFFFF7A1A);
 
 class MakerApp extends StatelessWidget {
@@ -31,7 +31,7 @@ class MakerApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         fontFamily: 'Cairo',
-        colorScheme: ColorScheme.fromSeed(seedColor: _blue, secondary: _orange),
+        colorScheme: ColorScheme.fromSeed(seedColor: _green, secondary: _orange),
         inputDecorationTheme: InputDecorationTheme(border: OutlineInputBorder(borderRadius: BorderRadius.circular(12))),
       ),
       home: const MakerHome(),
@@ -271,7 +271,7 @@ class _MakerHomeState extends State<MakerHome> {
                     const SizedBox(height: 16),
                     Container(
                       padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(color: _blue.withValues(alpha: 0.08), borderRadius: BorderRadius.circular(12)),
+                      decoration: BoxDecoration(color: _green.withValues(alpha: 0.08), borderRadius: BorderRadius.circular(12)),
                       child: SelectableText(_code!, textDirection: TextDirection.ltr, style: const TextStyle(fontSize: 11)),
                     ),
                     const SizedBox(height: 8),
