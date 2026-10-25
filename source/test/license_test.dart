@@ -7,7 +7,11 @@ import 'package:basket/src/core/license.dart';
 import 'package:basket/src/server/api_server.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-final _realKey = File('../signing/license-private.key');
+// المفتاح السري مش في المشروع: بيتدور عليه في فولدر صاحب البرنامج، ولو مش موجود الاختبار ده بيتخطى.
+final _realKey = [
+  File('D:/New folder/License-Maker/Basket/signing/license-private.key'),
+  File('../signing/license-private.key'),
+].firstWhere((f) => f.existsSync(), orElse: () => File('../signing/license-private.key'));
 
 void main() {
   group('codes', () {
